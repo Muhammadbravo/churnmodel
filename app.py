@@ -29,12 +29,12 @@ def predict():
 			user_inputs = [internetservice,onlinebackup,onlinesecurity,contract,paperlessbilling,paymentmethod,tenure,monthlycharges,totalcharges]
 
 			# load model
-			with open('/home/muhd_bravo/Projects/churnmodel/model/churn-model.bin', 'rb') as f_in:
+			with open('/model/churn-model.bin', 'rb') as f_in:
 				dv, model = pickle.load(f_in)
 			
 			# load inputs and convert to df
 			def input_to_df(input_list):
-				with open('/home/muhd_bravo/Projects/churnmodel/model/model_cols.bin', 'rb') as f_in:
+				with open('/model/model_cols.bin', 'rb') as f_in:
 					cols = pickle.load(f_in) 
 				map_df = dict(zip(cols,input_list))
 				input_df = pd.DataFrame([map_df])

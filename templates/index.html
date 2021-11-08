@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Churn Prediction</title>
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+<style>
+body {
+  background-image: url('/static/bac3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size:cover;
+  /* background-color: grey; */
+}
+label {
+	display: inline-block;
+  	width: 200px;
+  	text-align: center;
+
+}
+select {
+	display: inline-block;
+  	width: 100px;
+  	text-align: center;
+
+}
+</style>
+</head>
+<body>
+ <div class="main">
+	<center><h2 style="font-size: x-large; color: whitesmoke;">Churn Prediction (ML deployment)</h2>
+     <form action="{{ url_for('predict')}}"method="post" class="form">
+
+		<label for="internetservice" style="color:whitesmoke; font-size: medium;">Internet Service:</label>
+		<select id="internetservice" name="internetservice">
+			<option value="dsl">DSL</option>
+			<option value="fiber_optic">Fiber Optic</option>
+			<option value="no">No</option>
+		</select>
+
+		<br>
+		<br>
+
+		<label for="onlinebackup" style="color:whitesmoke; font-size: medium;">Online Backup:</label>
+		<select id="onlinebackup" name="onlinebackup">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+			<option value="no_internet_service">No Internet Service</option>
+		</select>
+
+		<br>
+		<br>
+
+		<label for="onlinesecurity" style="color:whitesmoke; font-size: medium;">Online Security:</label>
+		<select id="onlinesecurity" name="onlinesecurity">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+			<option value="no_internet_service">No Internet Service</option>
+		</select>
+
+		<br>
+		<br>
+
+		<label for="contract" style="color:whitesmoke; font-size: medium;">Contract:</label>
+		<select id="contract" name="contract">
+			<option value="month-to-month">Month to Month</option>
+			<option value="two_year">Two Year</option>
+			<option value="one_year">One Year</option>
+		</select>
+
+		<br>
+		<br>
+
+		<label for="paperlessbilling" style="color:whitesmoke; font-size: medium;">Paperless Billing:</label>
+		<select id="paperlessbilling" name="paperlessbilling">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+
+		<br>
+		<br>
+
+
+		<label for="paymentmethod" style="color:whitesmoke; font-size: medium;">Payment Method:</label>
+		<select id="paymentmethod" name="paymentmethod">
+			<option value="mailed_check">Mailed Check</option>
+			<option value="electronic_check">Electronic Check</option>
+			<option value="bank_transfer_(automatic)">Bank Transfer (automatic)</option>
+			<option value="credit_card_(automatic)">Credit Card (automatic)</option>
+		</select>
+		<br>
+		<br>
+		
+		<label for="tenure" style="color:whitesmoke; font-size: medium;">Tenure:</label>
+    	<input type="number" style="width: 100px" name="tenure" placeholder="(0 - 100)" min="0" max="100" required="required"/>
+		<br>
+		<br>
+
+		<label for="monthlycharges" style="color:whitesmoke; font-size: medium;">Monthly Charges:</label>
+		<input type="number" style="width: 100px" name="monthlycharges" placeholder="(18.0 - 120.0)" min="18.0" max="120.0" step="0.01" required="required" />
+		<br>
+		<br>
+
+		<label></label>
+        <button type="submit" style="color: blue;">Predict Churn</button>
+    </form>
+   	<br>
+	</center>
+</div>
+</body>
+</html>

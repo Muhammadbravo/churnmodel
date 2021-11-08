@@ -49,7 +49,7 @@ def predict():
 					churn = 'Churn'
 					return churn, y_pred_prob
 				else:
-					not_churn = 'Not churn'
+					not_churn = 'Non-Churn'
 					return not_churn, y_pred_prob
 			
 			inputs_df = input_to_df(user_inputs)

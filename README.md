@@ -4,6 +4,7 @@ This is the official repository of TEAM PROPHET and contributions made by the te
 # Project Description
 ![customer churn](https://user-images.githubusercontent.com/85574944/140988884-d50fdbeb-db14-4608-9888-e28be77ad9ca.png)
 
+
 For Telecom companies, it is important to attract new customers and at the same time equally important to avoid contract terminations (i.e. churn) to grow their revenue generating base. As there are several telecom players in the market, business competition is very high. As a result, customers change their service provider for various reasons such as better price offers, more interesting packages, bad service experiences, or change of customers’ personal situations.
 The churn metric is shown as the percentage of customers that cancel a product or service within a given period (mostly months). 
 We apply machine learning models to predict churn on an individual customer basis and take counter-measures such as discounts, special offers or other gratifications to keep their customers.
@@ -67,6 +68,3 @@ A customer churn analysis is a typical classification problem within the domain 
 - https://github.com/abeenoch
 - https://github.com/Aleqxan/Aleqxan
 - 
-
-## Licence
-

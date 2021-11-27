@@ -66,6 +66,6 @@ A customer churn analysis is a typical classification problem within the domain 
 - https://github.com/DaudaUmarFaruq2020
 - https://github.com/abeenoch
 - https://github.com/Aleqxan/Aleqxan
-- 
+- https://github.com/Manny-97
 
 ## Licence
